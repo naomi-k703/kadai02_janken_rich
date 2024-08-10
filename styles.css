@@ -1,0 +1,104 @@
+/* ページ全体のスタイルをリセットして、ブラウザ間の一貫性を保つ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ページ全体の背景色と基本のフォント設定 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* コンテナのスタイル：ページの中央に配置し、幅と背景色を設定 */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ページタイトルのスタイル */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0044cc;
+    text-align: center;
+}
+
+/* 設問グループ全体のスタイル */
+.question-group {
+    margin-bottom: 20px;
+}
+
+/* 各設問（ラベル）のスタイル */
+.question-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* チェックボックスのスタイルをカスタマイズ */
+.question-group input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/* ボタンのスタイル */
+button[type="submit"] {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+/* ボタンをホバーした時のスタイル */
+button[type="submit"]:hover {
+    background-color: #003399;
+}
+
+/* 結果表示セクションのスタイル */
+#result {
+    margin-top: 20px;
+}
+
+/* グラフコンテナのスタイル */
+.chart-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+/* 診断結果リストのスタイル */
+#gradingResult {
+    list-style-type: none;
+    font-size: 1.1em;
+}
+
+/* 診断結果リストの各項目のスタイル */
+#gradingResult li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #0044cc;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ページの文字エンコードをUTF-8に設定（日本語対応） -->
+    <meta charset="UTF-8">
+    <!-- ビューポートの設定：画面幅に応じてコンテンツのサイズが変わるようにする -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページのタイトル設定 -->
+    <title>組織課題チェックシート</title>
+    <!-- 外部CSSファイルの読み込み（スタイル設定） -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.jsライブラリの読み込み（グラフ描画用のライブラリ） -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- 全体のコンテンツを囲むコンテナ -->
+    <div class="container">
+        <!-- ページのタイトル -->
+        <h1>組織課題チェックシート</h1>
+
+        <!-- クライアント名：組織の段階を表示 -->
+        <label for="clientName">クライアント名:</label>
+        <input type="text" id="clientName" name="clientName" required><br><br>
+
+        <label for="orgStage">組織の成長段階を選択:</label>
+        <select id="orgStage" name="orgStage">
+            <option value="startup">創業段階（1〜10人）</option>
+            <option value="growth">成長段階（10〜50人）</option>
+            <option value="expansion">拡大段階（50〜200人）</option>
+            <option value="maturity">安定・成熟段階（200〜1000人）</option>
+            <option value="restructuring">再構築・変革段階（1000人以上）</option>
+        </select><br><br>
+
+        <!-- チェック項目フォームの開始 -->
+        <form id="checkForm">
+            <!-- 設問リストの見出し -->
+            <h2>設問</h2>
+            <!-- 設問をまとめたグループ -->
+            <div class="question-group">
+                <!-- 設問1：心理的安全性に関するチェックボックス -->
+                <label>
+                    <input type="checkbox" name="organization" value="心理的安全性"> 組織メンバーは、組織の目的を話すことができると思いますか？
+                </label><br>
+                <!-- 設問2：リーダーシップの質に関するチェックボックス -->
+                <label>
+                    <input type="checkbox" name="leadership" value="リーダーシップの質"> 組織内で情報や課題の共有がスムーズに行われていますか？
+                </label><br>
+                <!-- 設問3：オープンなコミュニケーションに関するチェックボックス -->
+                <label>
+                    <input type="checkbox" name="communication" value="オープンなコミュニケーション"> 組織内では、リーダーシップは効果的に発揮されていると思いますか？
+                </label><br>
+                <!-- 他の設問もこの形式で追加していく -->
+                <!-- ここに追加の項目を配置します -->
+            </div>
+
+            <!-- フォームの送信ボタン -->
+            <button type="submit">結果を表示</button>
+        </form>
+
+        <!-- 分析結果を表示するセクション -->
+        <div id="result" style="display:none;">
+            <h2>分析結果</h2>
+
+            <p>クライアント名: <span id="clientNameResult"></span></p>
+            <p>組織の成長段階: <span id="orgStageResult"></span></p>
+
+            <h3>診断結果</h3>
+            <!-- 結果のレーダーチャートを描画するためのキャンバス -->
+            <div class="chart-container">
+                <canvas id="resultChart"></canvas>
+            </div>
+            <h3>詳細評価</h3>
+            <!-- 採点結果のリスト -->
+            <ul id="gradingResult"></ul>
+        </div>
+    </div>
+
+    <!-- 外部のJavaScriptファイルの読み込み（スクリプトの処理を記述） -->
+    <script src="app.js"></script>
+</body>
+</html>
