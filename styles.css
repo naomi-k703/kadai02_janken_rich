@@ -8,10 +8,11 @@
 /* ページ全体の背景色と基本のフォント設定 */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fdf6e3; /* 背景色を優しいクリーム色に設定 */
     color: #333;
     line-height: 1.6;
     margin: 20px;
+    font-size: 75%; /* 文字サイズを75%に縮小 */
 }
 
 /* コンテナのスタイル：ページの中央に配置し、幅と背景色を設定 */
@@ -19,7 +20,7 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background: #fff;
+    background: #ffffff; /* 白背景にして清潔感を演出 */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -28,7 +29,7 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #0044cc;
+    color: #b58900; /* 暖かみのあるオレンジ色 */
     text-align: center;
 }
 
@@ -45,6 +46,7 @@ h1 {
     padding-left: 25px;
     position: relative;
     cursor: pointer;
+    color: #586e75; /* 柔らかいグレー */
 }
 
 /* チェックボックスのスタイルをカスタマイズ */
@@ -58,7 +60,7 @@ h1 {
 
 /* ボタンのスタイル */
 button[type="submit"] {
-    background-color: #0044cc;
+    background-color: #268bd2; /* 暖かみのある青色 */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -72,7 +74,7 @@ button[type="submit"] {
 
 /* ボタンをホバーした時のスタイル */
 button[type="submit"]:hover {
-    background-color: #003399;
+    background-color: #1c7aad; /* ボタンをホバーした時の少し濃い青 */
 }
 
 /* 結果表示セクションのスタイル */
@@ -82,9 +84,16 @@ button[type="submit"]:hover {
 
 /* グラフコンテナのスタイル */
 .chart-container {
-    width: 100%;
+    width: 75%; /* グラフの幅を75%に調整 */
     height: 400px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto; /* 上下中央に配置 */
+    padding: 10px;
+    background-color: #eee8d5; /* 暖かみのある薄いベージュ色 */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 診断結果リストのスタイル */
@@ -93,12 +102,112 @@ button[type="submit"]:hover {
     font-size: 1.1em;
 }
 
+/* レーダーチャートのキャンバスのスタイル */
+#resultChart {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 診断結果リストのスタイル */
+#gradingResult {
+    list-style-type: none;
+    font-size: 1.1em;
+    color: #586e75; /* 柔らかいグレー */
+}
+
 /* 診断結果リストの各項目のスタイル */
 #gradingResult li {
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #f0f0f0;
-    border-left: 4px solid #0044cc;
+    background-color: #fdf6e3; /* 背景色をクリーム色に設定 */
+    border-left: 4px solid #268bd2; /* ボーダーを暖かみのある青色に設定 */
     border-radius: 5px;
 }
+
+/* 他のスタイルの後に、以下のスタイルを追加 */
+
+.chart-container {
+    width: 75%; /* グラフの幅を75%に調整 */
+    height: 400px;
+    margin: 0 auto 20px auto; /* 上下中央に配置 */
+    padding: 10px;
+    background-color: #eaeaea; /* 背景色をライトグレーに */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 子要素を水平方向に中央揃え */
+    align-items: center; /* 子要素を垂直方向に中央揃え */
+}
+
+#resultChart {
+    max-width: 100%;
+    height: 400px; /* 必要に応じて高さを調整 */
+}
+
+/* クライアント名と組織段階の表示を中央に揃えて、大きく、太字にする */
+#result p {
+    text-align: center; /* 中央揃え */
+    font-size: 1.2em; /* 文字サイズを少し大きく */
+    font-weight: bold; /* 文字を太字に */
+    margin-bottom: 10px;
+}
+
+/* クライアント名と成長段階の具体的な内容をさらに強調する */
+#clientNameResult, #orgStageResult {
+    font-size: 1.5em; /* 文字サイズをさらに大きく */
+    font-weight: bold; /* さらに強調するため太字に */
+    color: #b58900; /* 既に使用している暖かみのあるオレンジ色を適用 */
+}
+
+/* 結果表示セクションのスタイル */
+#result h2 {
+    text-align: left; /* 分析結果のタイトルは左揃えのまま */
+    font-size: 1.5em; /* タイトルを少し大きくする */
+    color: #333; /* 色は黒（デフォルト）に設定 */
+    margin-bottom: 20px;
+}
+
+/* 診断結果リストのスタイル */
+#gradingResult {
+    list-style-type: none;
+    font-size: 1.1em;
+    color: #586e75; /* 柔らかいグレーで統一 */
+    padding-left: 0; /* 左のインデントを削除 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 診断結果リストの各項目のスタイル */
+#gradingResult li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fdf6e3; /* 背景色をクリーム色に設定 */
+    border-left: 4px solid #268bd2; /* ボーダーを暖かみのある青色に設定 */
+    border-radius: 5px;
+}
+
 

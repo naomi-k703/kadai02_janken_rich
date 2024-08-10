@@ -35,25 +35,74 @@
         <!-- チェック項目フォームの開始 -->
         <form id="checkForm">
             <!-- 設問リストの見出し -->
-            <h2>設問</h2>
-            <!-- 設問をまとめたグループ -->
-            <div class="question-group">
+            
                 <!-- 設問1：心理的安全性に関するチェックボックス -->
+                <!-- チェック項目のフォームを開始 -->
+                  <!-- 設問リストの見出し -->
+            
+            <!-- 設問をまとめたグループ -->
+        <form id="checkForm">
+            <h2>設問</h2>
+            <div class="question-group">
+                <!-- 各設問のラベルとチェックボックス -->
                 <label>
                     <input type="checkbox" name="organization" value="心理的安全性"> 組織メンバーは、組織の目的を話すことができると思いますか？
                 </label><br>
-                <!-- 設問2：リーダーシップの質に関するチェックボックス -->
                 <label>
-                    <input type="checkbox" name="leadership" value="リーダーシップの質"> 組織内で情報や課題の共有がスムーズに行われていますか？
+                    <input type="checkbox" name="organization" value="組織への貢献"> 組織の各メンバーは組織にどのように貢献する必要があるかを知っていますか？
                 </label><br>
-                <!-- 設問3：オープンなコミュニケーションに関するチェックボックス -->
                 <label>
-                    <input type="checkbox" name="communication" value="オープンなコミュニケーション"> 組織内では、リーダーシップは効果的に発揮されていると思いますか？
+                    <input type="checkbox" name="leadership" value="情報共有"> 組織内で情報や課題の共有がスムーズに行われていますか？
                 </label><br>
-                <!-- 他の設問もこの形式で追加していく -->
-                <!-- ここに追加の項目を配置します -->
+                <label>
+                    <input type="checkbox" name="leadership" value="リーダーシップの質"> 組織内では、リーダーシップは効果的に発揮されていると思いますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="communication" value="相談理解"> 組織メンバーは、問題が発生した際に、どのように相談すれば良いか理解していますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="communication" value="傾聴"> 組織メンバーは、相談を受けた際に、時間を取って傾聴しようとしていますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="communication" value="役割理解"> 組織メンバーは、お互いの役割について理解していると思いますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="communication" value="報連相"> 組織メンバーは、進捗状況や課題について1週間に1回は報告、連絡、相談ができるようになっていますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="communication" value="コミュニケーション手段"> 組織メンバーは、コミュニケーション手段（メール、チャット、会議など）について、どの時に、どのコミュニケーション手段を取れば良いことを理解していますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="career" value="キャリアビジョン"> 各組織メンバーのキャリアビジョンは明確ですか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="career" value="キャリア理解"> 各組織メンバーが理想のキャリアを歩むために、何をしたら良いか理解していますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="career" value="アクションプラン"> 各組織メンバーは理想のキャリアを歩むためのアクションプランを策定できていますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="selfEfficacy" value="強み理解"> 各組織メンバーは、自分の強みを理解し、それを活かす方法を知っていますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="selfEfficacy" value="自己効力感"> 各組織メンバーは、自己効力感は高いですか（自信を持って仕事していますか）？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="selfEfficacy" value="感情コントロール"> 各組織メンバーは、問題が発生した時に感情的にならずにコントロールすることができますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="jobMeaning" value="仕事の意義"> 各組織メンバーは、現在の仕事に意義を感じていますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="jobMeaning" value="やりたいこと理解"> 各組織メンバーは、自分のやりたいことが何か理解していますか？
+                </label><br>
+                <label>
+                    <input type="checkbox" name="jobMeaning" value="強みの活かし方"> 各組織メンバーは、自分の強みをどうやって活かせば、やりたいことが実現できるか理解していますか？
+                </label><br>
             </div>
 
+                <!-- ここに追加の項目を配置します -->
+        
             <!-- フォームの送信ボタン -->
             <button type="submit">結果を表示</button>
         </form>
@@ -70,7 +119,6 @@
             <div class="chart-container">
                 <canvas id="resultChart"></canvas>
             </div>
-            <h3>詳細評価</h3>
             <!-- 採点結果のリスト -->
             <ul id="gradingResult"></ul>
         </div>
